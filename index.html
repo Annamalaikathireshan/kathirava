@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/kathirava logo.png">
+    <title>Kathirava Agency | Authorized Super Stockist of Pidilite & Haishaa Paints</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pidilite: '#0033A0',
+                        pidiliteLight: '#0047D1',
+                        haishaa: '#E31937',
+                        haishaaLight: '#FF2D4D',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+            border-left: 4px solid #0033A0;
+        }
+        
+        .nav-link:hover {
+            color: #0033A0;
+        }
+        
+        .nav-link:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #0033A0;
+            transition: width .3s;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/kathirava logo.png" alt="Kathirava Agency Logo" class="h-12 mr-3">
+                <div>
+                    <h1 class="text-xl font-bold text-pidilite">Kathirava Agency</h1>
+                    <p class="text-xs text-gray-600">Authorized Super Stockist of Pidilite & Haishaa Paints</p>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link font-medium">Home</a>
+                <a href="#about" class="nav-link font-medium">About Us</a>
+                <a href="#products" class="nav-link font-medium">Products</a>
+                <a href="#gallery" class="nav-link font-medium">Gallery</a>
+                <a href="#contact" class="nav-link font-medium">Contact</a>
+            </div>
+            
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#home" class="block py-2 border-b border-gray-100">Home</a>
+            <a href="#about" class="block py-2 border-b border-gray-100">About Us</a>
+            <a href="#products" class="block py-2 border-b border-gray-100">Products</a>
+            <a href="#gallery" class="block py-2 border-b border-gray-100">Gallery</a>
+            <a href="#contact" class="block py-2">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center mb-8">
+                <img src="https://via.placeholder.com/150x60" alt="Pidilite Logo" class="mx-4 h-12 md:h-16">
+                <img src="https://via.placeholder.com/150x60" alt="Haishaa Logo" class="mx-4 h-12 md:h-16">
+            </div>
+            
+            <h1 class="text-3xl md:text-5xl font-bold mb-6">Premium Building Solutions for Professionals</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Trusted distributor of Pidilite adhesives, Dr. Fixit waterproofing, and Haishaa decorative paints across [Region/State]</p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-pidilite hover:bg-pidiliteLight text-white font-bold py-3 px-8 rounded-full transition duration-300">Contact Us</a>
+                <a href="#products" class="bg-haishaa hover:bg-haishaaLight text-white font-bold py-3 px-8 rounded-full transition duration-300">Our Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="bg-gray-100 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <img src="https://via.placeholder.com/120x60" alt="Authorized Dealer Badge" class="h-10 md:h-14">
+                <img src="https://via.placeholder.com/120x60" alt="ISO Certified" class="h-10 md:h-14">
+                <img src="https://via.placeholder.com/120x60" alt="Super Stockist" class="h-10 md:h-14">
+                <img src="https://via.placeholder.com/120x60" alt="Trusted Partner" class="h-10 md:h-14">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">About Kathirava Agency</h2>
+                <div class="w-20 h-1 bg-pidilite mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Kathirava Agency Warehouse" class="rounded-lg shadow-xl w-full">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Legacy Since 1995</h3>
+                    <p class="text-gray-600 mb-4">Kathirava Agency has been a trusted name in the building materials distribution industry for over 25 years. As an authorized super stockist of Pidilite Industries and Haishaa Paints, we serve [Region/State] with an unwavering commitment to quality and service.</p>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Our Values</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex items-start">
+                                <div class="bg-pidilite text-white p-2 rounded-full mr-3">
+                                    <i class="fas fa-check-circle text-sm"></i>
+                                </div>
+                                <p class="text-gray-600">Quality Assurance</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-pidilite text-white p-2 rounded-full mr-3">
+                                    <i class="fas fa-check-circle text-sm"></i>
+                                </div>
+                                <p class="text-gray-600">Timely Delivery</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-pidilite text-white p-2 rounded-full mr-3">
+                                    <i class="fas fa-check-circle text-sm"></i>
+                                </div>
+                                <p class="text-gray-600">Technical Support</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-pidilite text-white p-2 rounded-full mr-3">
+                                    <i class="fas fa-check-circle text-sm"></i>
+                                </div>
+                                <p class="text-gray-600">Competitive Pricing</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <div class="flex items-center">
+                            <img src="./assets/owner image.jpg" alt="Owner Photo" class="w-16 h-16 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Mr. Kathireshan</h4>
+                                <p class="text-sm text-gray-600">Founder & CEO</p>
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600 italic">"Our mission is to provide the best building solutions to professionals across [Region/State], backed by unmatched service and technical expertise."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Choose Kathirava Agency</h2>
+                <div class="w-20 h-1 bg-pidilite mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-pidilite text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-truck text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Extensive Distribution Network</h3>
+                    <p class="text-gray-600">We cover the entire [Region/State] with our fleet of delivery vehicles, ensuring timely supply to all our dealers and retailers.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-pidilite text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-boxes text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Comprehensive Stock</h3>
+                    <p class="text-gray-600">As a super stockist, we maintain complete range of Pidilite and Haishaa products ready for immediate dispatch.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-pidilite text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Technical Support</h3>
+                    <p class="text-gray-600">Our team includes product experts who can provide technical guidance and application support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Product Portfolio</h2>
+                <div class="w-20 h-1 bg-pidilite mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">We distribute the complete range of Pidilite and Haishaa products for all your construction and decorative needs.</p>
+            </div>
+            
+            <!-- Product Categories -->
+            <div class="mb-12">
+                <div class="flex flex-wrap justify-center gap-2 mb-8">
+                    <button class="product-filter-btn px-4 py-2 rounded-full bg-pidilite text-white" data-category="all">All Products</button>
+                    <button class="product-filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300" data-category="adhesives">Adhesives</button>
+                    <button class="product-filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300" data-category="waterproofing">Waterproofing</button>
+                    <button class="product-filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300" data-category="art">Art Materials</button>
+                    <button class="product-filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300" data-category="paints">Decorative Paints</button>
+                    <button class="product-filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300" data-category="industrial">Industrial</button>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+                    <!-- Product cards will be dynamically filtered -->
+                    <div class="product-card p-6 border border-gray-200 rounded-lg transition duration-300" data-category="adhesives">
+                        <div class="bg-gray-100 p-4 rounded-lg mb-4 flex justify-center">
+                            <img src="https://via.placeholder.com/150x150" alt="Fevicol" class="h-32">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Fevicol MR</h3>
+                        <p class="text-gray-600 mb-4">Premium synthetic resin adhesive for woodworking applications.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-pidilite">Available</span>
+                            <button class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded">Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card p-6 border border-gray-200 rounded-lg transition duration-300" data-category="adhesives">
+                        <div class="bg-gray-100 p-4 rounded-lg mb-4 flex justify-center">
+                            <img src="https://via.placeholder.com/150x150" alt="Fevikwik" class="h-32">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Fevikwik</h3>
+                        <p class="text-gray-600 mb-4">Instant adhesive for quick repairs and bonding various materials.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-pidilite">Available</span>
+                            <button class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded">Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card p-6 border border-gray-200 rounded-lg transition duration-300" data-category="waterproofing">
+                        <div class="bg-gray-100 p-4 rounded-lg mb-4 flex justify-center">
+                            <img src="https://via.placeholder.com/150x150" alt="Dr. Fixit" class="h-32">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Dr. Fixit LW+</h3>
+                        <p class="text-gray-600 mb-4">Cementitious waterproofing coating for roofs and terraces.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-pidilite">Available</span>
+                            <button class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded">Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card p-6 border border-gray-200 rounded-lg transition duration-300" data-category="waterproofing">
+                        <div class="bg-gray-100 p-4 rounded-lg mb-4 flex justify-center">
+                            <img src="https://via.placeholder.com/150x150" alt="Roff" class="h-32">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Roff Tile Adhesive</h3>
+                        <p class="text-gray-600 mb-4">Premium polymer-modified cementitious tile adhesive.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-pidilite">Available</span>
+                            <button class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded">Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card p-6 border border-gray-200 rounded-lg transition duration-300" data-category="art">
+                        <div class="bg-gray-100 p-4 rounded-lg mb-4 flex justify-center">
+                            <img src="https://via.placeholder.com/150x150" alt="Fevicryl" class="h-32">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Fevicryl Hobby Ideas</h3>
+                        <p class="text-gray-600 mb-4">Range of craft and hobby materials for creative projects.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-pidilite">Available</span>
+                            <button class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded">Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card p-6 border border-gray-200 rounded-lg transition duration-300" data-category="paints">
+                        <div class="bg-gray-100 p-4 rounded-lg mb-4 flex justify-center">
+                            <img src="https://via.placeholder.com/150x150" alt="Haishaa" class="h-32">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Haishaa Interior Emulsion</h3>
+                        <p class="text-gray-600 mb-4">Premium acrylic emulsion paint for interior walls.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-pidilite">Available</span>
+                            <button class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded">Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card p-6 border border-gray-200 rounded-lg transition duration-300" data-category="paints">
+                        <div class="bg-gray-100 p-4 rounded-lg mb-4 flex justify-center">
+                            <img src="https://via.placeholder.com/150x150" alt="Haishaa" class="h-32">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Haishaa Exterior Emulsion</h3>
+                        <p class="text-gray-600 mb-4">Weather-resistant exterior paint with UV protection.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-pidilite">Available</span>
+                            <button class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded">Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card p-6 border border-gray-200 rounded-lg transition duration-300" data-category="industrial">
+                        <div class="bg-gray-100 p-4 rounded-lg mb-4 flex justify-center">
+                            <img src="https://via.placeholder.com/150x150" alt="Industrial" class="h-32">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Pidilite Industrial Resins</h3>
+                        <p class="text-gray-600 mb-4">Specialty resins for industrial applications and manufacturing.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-pidilite">Available</span>
+                            <button class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded">Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card p-6 border border-gray-200 rounded-lg transition duration-300" data-category="industrial">
+                        <div class="bg-gray-100 p-4 rounded-lg mb-4 flex justify-center">
+                            <img src="https://via.placeholder.com/150x150" alt="Industrial" class="h-32">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Construction Chemicals</h3>
+                        <p class="text-gray-600 mb-4">Complete range of construction chemicals and additives.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-pidilite">Available</span>
+                            <button class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Retailer Order Section -->
+            <div class="bg-gray-100 rounded-lg p-8">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Dealer & Retailer Order Form</h3>
+                    <p class="text-gray-600">Authorized dealers can place orders or inquire about stock availability</p>
+                </div>
+                
+                <form class="max-w-2xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pidilite">
+                        </div>
+                        <div>
+                            <label for="business" class="block text-gray-700 mb-2">Business Name</label>
+                            <input type="text" id="business" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pidilite">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pidilite">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pidilite">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="products" class="block text-gray-700 mb-2">Products of Interest</label>
+                            <select id="products" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pidilite">
+                                <option value="">Select Product Category</option>
+                                <option value="adhesives">Pidilite Adhesives</option>
+                                <option value="waterproofing">Dr. Fixit Waterproofing</option>
+                                <option value="paints">Haishaa Paints</option>
+                                <option value="art">Fevicryl Art Materials</option>
+                                <option value="industrial">Industrial Products</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="message" class="block text-gray-700 mb-2">Specific Products or Inquiry</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pidilite"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 text-center">
+                        <button type="submit" class="bg-pidilite hover:bg-pidiliteLight text-white font-bold py-3 px-8 rounded-full transition duration-300">Submit Order Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Our Clients Say</h2>
+                <div class="w-20 h-1 bg-pidilite mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/60x60" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Rajesh Builders</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Kathirava Agency has been our trusted supplier for all Pidilite products. Their technical support and prompt delivery have been invaluable for our projects."</p>
+                </div>
+                
+                <div class="testimonial-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/60x60" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Modern Paint House</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"As a paint retailer, we rely on Kathirava Agency for consistent supply of Haishaa paints. Their service is exceptional and they always have stock available."</p>
+                </div>
+                
+                <div class="testimonial-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/60x60" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Ar. Priya Desai</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"I specify Pidilite products in my projects because I know Kathirava Agency will ensure my clients get genuine materials with proper technical guidance."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Gallery</h2>
+                <div class="w-20 h-1 bg-pidilite mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Explore our product range, warehouse facilities, and project applications</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Warehouse" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600566752227-8688d39253f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Paints" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Construction" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600607688969-6e5c8f1d9701?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Adhesives" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600606753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Delivery" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600606752355-35792bedcfe3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Retail Store" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600606758969-6e5c8f1d9701?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Products" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Team" class="w-full h-48 object-cover transition duration-300 hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Center -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Download Center</h2>
+                <div class="w-20 h-1 bg-pidilite mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Access product brochures, technical data sheets, and application guides</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-pidilite text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-file-pdf text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Pidilite Product Catalog</h3>
+                            <p class="text-gray-600 mb-3">Complete range of Pidilite adhesives, waterproofing, and construction chemicals.</p>
+                            <a href="#" class="text-pidilite font-medium hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download PDF (5.2MB)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-pidilite text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-file-pdf text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Haishaa Paint Brochure</h3>
+                            <p class="text-gray-600 mb-3">Color catalog and technical specifications for Haishaa decorative paints.</p>
+                            <a href="#" class="text-pidilite font-medium hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download PDF (3.8MB)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-pidilite text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-file-pdf text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Dr. Fixit Application Guide</h3>
+                            <p class="text-gray-600 mb-3">Step-by-step waterproofing solutions for different construction scenarios.</p>
+                            <a href="#" class="text-pidilite font-medium hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download PDF (4.1MB)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-pidilite text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-file-pdf text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Fevicol Technical Data Sheet</h3>
+                            <p class="text-gray-600 mb-3">Detailed technical specifications for Fevicol wood adhesives.</p>
+                            <a href="#" class="text-pidilite font-medium hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download PDF (2.7MB)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-pidilite text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-file-pdf text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Tile Installation Handbook</h3>
+                            <p class="text-gray-600 mb-3">Best practices for tile installation using Roff products.</p>
+                            <a href="#" class="text-pidilite font-medium hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download PDF (3.5MB)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-pidilite text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-file-pdf text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Fevicryl Craft Ideas</h3>
+                            <p class="text-gray-600 mb-3">Creative project ideas using Fevicryl art materials.</p>
+                            <a href="#" class="text-pidilite font-medium hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download PDF (6.2MB)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                <div class="w-20 h-1 bg-pidilite mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Get in touch with our team for product inquiries, technical support, or dealer registration</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-2">Kathirava Agency</h4>
+                            <p class="text-gray-600">Authorized Super Stockist of Pidilite & Haishaa Paints</p>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-pidilite text-white p-2 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Address</h4>
+                                    <p class="text-gray-600">123 Industrial Area, [City], [State] - 560001</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-pidilite text-white p-2 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Phone</h4>
+                                    <p class="text-gray-600">+91 9865011368</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-pidilite text-white p-2 rounded-full mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-gray-600">kathireshanr@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-pidilite text-white p-2 rounded-full mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Business Hours</h4>
+                                    <p class="text-gray-600">Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                                    <p class="text-gray-600">Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold mb-3">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-gray-200 hover:bg-pidilite hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-gray-200 hover:bg-pidilite hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-gray-200 hover:bg-pidilite hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="bg-gray-200 hover:bg-pidilite hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 p-8 rounded-lg h-full">
+                        <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                        
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label for="contact-name" class="block text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="contact-name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pidilite">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contact-email" class="block text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="contact-email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pidilite">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contact-phone" class="block text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="contact-phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pidilite">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contact-subject" class="block text-gray-700 mb-2">Subject</label>
+                                <select id="contact-subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pidilite">
+                                    <option value="">Select Subject</option>
+                                    <option value="product">Product Inquiry</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="dealer">Dealer Registration</option>
+                                    <option value="order">Order Status</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="contact-message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="contact-message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pidilite"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-pidilite hover:bg-pidiliteLight text-white font-bold py-3 px-4 rounded transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 rounded-lg overflow-hidden">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.1405977148033!2d78.09522711167499!3d9.922246490138297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cf703c64a6bf%3A0xc5dd4ee73bb2abc8!2sKathirava%20Agency!5e0!3m2!1sen!2sin!4v1750788569165!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Kathirava Agency</h3>
+                    <p class="text-gray-400 mb-4">Authorized Super Stockist of Pidilite Industries and Haishaa Paints serving [Region/State] since 1995.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white">Gallery</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Our Brands</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pidilite Products</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Haishaa Paints</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Fevicol Adhesives</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Dr. Fixit Waterproofing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Fevicryl Art Materials</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for product updates and offers.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l focus:outline-none text-gray-800">
+                        <button type="submit" class="bg-pidilite hover:bg-pidiliteLight px-4 py-2 rounded-r">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Kathirava Agency. All Rights Reserved.</p>
+                <p class="mt-2">Designed & Developed by [Your Company]</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Product filtering
+        const filterButtons = document.querySelectorAll('.product-filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-pidilite', 'text-white');
+                    btn.classList.add('bg-gray-200', 'hover:bg-gray-300');
+                });
+                button.classList.add('bg-pidilite', 'text-white');
+                button.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+                
+                // Filter products
+                const category = button.getAttribute('data-category');
+                productCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Add shadow to header on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+
+        // Contact form mailto handler
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('contact-name').value;
+                const email = document.getElementById('contact-email').value;
+                const phone = document.getElementById('contact-phone').value;
+                const subject = document.getElementById('contact-subject').value;
+                const message = document.getElementById('contact-message').value;
+                const mailto = `mailto:kathireshanr@gmail.com?subject=Website Contact: ${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\nMessage: ' + message)}`;
+                window.location.href = mailto;
+            });
+        }
+    </script>
+</body>
+</html>
